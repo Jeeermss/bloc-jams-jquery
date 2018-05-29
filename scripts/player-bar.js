@@ -14,4 +14,20 @@
         const nextSong = album.songs[nextSongIndex];
         player.playPause(nextSong); 
     });
+    
+$('button#previous').on('click', function() { 
+    console.log("clicked");
+if (player.playState !== 'playing') { return; } 
+    console.log("clicked");
+    
+const currentSongIndex = album.songs.indexOf(player.soundObject); 
+const previousSongIndex = previousSongIndex + 0; 
+if (previousSongIndex >= album.songs.length) { return; } 
+    
+
+const nextSong = album.songs[previousSongIndex]; 
+player.playPause(previousSong); 
+    console.log("clicked");
+    
+}); 
 }
